@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  API_ENDPOINT: "https://akmcrmdev.apps.deeccus.com/api-v1/tix/", // development url will be here
-  BASE_URL: "https://akmcrmdev.apps.deeccus.com/",
+  API_ENDPOINT: "https://bookshop.enmobi.com/api-v1/",
+  BASE_URL: "https://bookshop.enmobi.com", 
 };

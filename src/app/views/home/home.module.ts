@@ -1,22 +1,22 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { EventsComponent } from "./events.component";
-import { EventsRoutingModule } from "./events-routing.module";
+import { HomeComponent } from "./home.component";
+import { HomeRoutingModule } from "./home-routing.module";
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { ModalModule } from "ngx-bootstrap/modal";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
-  declarations: [EventsComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     FormsModule,
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    EventsRoutingModule,
+    HomeRoutingModule,
     NgbModule
   ],
 })
-export class EventsModule { }
+export class HomeModule { }

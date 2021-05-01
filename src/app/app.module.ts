@@ -45,7 +45,7 @@ import { NgbModule, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
     P404Component,
     P500Component,
     LoginComponent,
-    ConfirmationDialogComponent,
+    ConfirmationDialogComponent
   ],
   // exports: [
   //   ActivityComponent

@@ -1,0 +1,70 @@
+<!-- New Arrivals
+    ================================================== -->
+<div class="container">
+
+    <!-- Headline -->
+    <div class="sixteen columns">
+        <h3 class="headline">New Arrivals</h3>
+        <span class="line margin-bottom-0"></span>
+    </div>
+
+    <!-- Carousel -->
+    <div id="new-arrivals" class="showbiz-container sixteen columns">
+
+        <!-- Navigation -->
+        <div class="showbiz-navigation">
+            <div id="showbiz_left_1" class="sb-navigation-left"><i class="fa fa-angle-left"></i></div>
+            <div id="showbiz_right_1" class="sb-navigation-right"><i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- Products -->
+        <div class="showbiz" data-left="#showbiz_left_1" data-right="#showbiz_right_1" data-play="#showbiz_play_1">
+            <div class="overflowholder">
+
+                <ul>
+
+                    <!-- Product #1 -->
+
+
+
+
+                    <li *ngFor="let item of products">
+                        <figure class="product">
+                            <div class="mediaholder">
+                                <a href="product-details.html?id=1o77zmfbwgi-e660c833-d25c-43c0-bc00-a08dc1dfdee3">
+                                    <img alt="" src="{{baseUrl+item.image.url}}" />
+                                    <div class="cover">
+                                        <img alt="" src="{{baseUrl+item.image.url}}" />
+                                    </div>
+                                </a>
+                                <a href="javascript:" class="product-button"><i class="fa fa-shopping-cart"></i>                                    Add to Cart</a>
+                            </div>
+
+                            <a href="product-details.html?id=1o77zmfbwgi-e660c833-d25c-43c0-bc00-a08dc1dfdee3">
+                                <section>
+                                    <!--<span class="product-category">Books</span>-->
+                                    <h6>{{item.name}}</h6>
+                                    <span class="product-price"><i class="fa fa-inr"></i> {{item.price}}</span>
+                                </section>
+                            </a>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Parallax Banner
+    ================================================== -->
+<div class="parallax-banner fullwidth-element" data-background="#000" data-opacity="0.45" data-height="200">
+    <img src="../../../assets/img/parallax.jpg" alt="" />
+    <div class="parallax-overlay"></div>
+    <div class="parallax-title">Back to school <span>Up to 35% off all books</span></div>
+</div>

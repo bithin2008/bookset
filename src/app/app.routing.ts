@@ -5,10 +5,11 @@ import { DefaultLayoutComponent } from "./containers";
 import { P404Component } from "./views/error/404.component";
 import { P500Component } from "./views/error/500.component";
 import { LoginComponent } from "./views/login/login.component";
+import { MyAccountComponent } from "./views/my-account/my-account.component";
 export const routes: Routes = [
   {
     path: "",
-    redirectTo: "login",
+    redirectTo: "home",
     pathMatch: "full",
   },
   {
@@ -33,6 +34,20 @@ export const routes: Routes = [
     },
   },
   {
+    path: "my-account",
+    component: DefaultLayoutComponent,
+    data: {
+      title: "my account",
+    },
+    children: [
+      {
+        path: "",
+        loadChildren: () =>
+          import("./views/my-account/my-account.module").then((m) => m.MyAccountModule),
+      }
+    ],
+  },
+  {
     path: "",
     component: DefaultLayoutComponent,
     data: {
@@ -42,7 +57,7 @@ export const routes: Routes = [
       {
         path: "home",
         loadChildren: () =>
-          import("./views/events/events.module").then((m) => m.EventsModule),
+          import("./views/home/home.module").then((m) => m.HomeModule),
       }
     ],
   },

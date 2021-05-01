@@ -17,14 +17,14 @@ declare var jQuery:any;
 declare var $ :any;
 
 @Component({
-  selector: "app-events",
-  templateUrl: "./events.component.html",
-  styleUrls: ["./events.component.css"],
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"],
 })
-export class EventsComponent implements OnInit {
+export class HomeComponent implements OnInit {
   public baseUrl = environment.BASE_URL;
   isEdit: boolean = false;
-  events: any = [];
+  products: any = [];
   formDetails: any = {
     venue: ''
   };
@@ -188,18 +188,7 @@ export class EventsComponent implements OnInit {
 
   // ShowBiz Carousel
   //----------------------------------------//
-  $('#new-arrivals').showbizpro({
-    dragAndScroll:"off",
-    visibleElementsArray:[4,4,3,1],
-    carousel:"off",
-    entrySizeOffset:0,
-    allEntryAtOnce:"off",
-    rewindFromEnd:"off",
-    autoPlay:"off",
-    delay:2000,
-    speed:400,
-    easing:'Back.easeOut'
-  });
+ 
 
   $('#happy-clients').showbizpro({
     dragAndScroll:"off",
@@ -905,6 +894,8 @@ export class EventsComponent implements OnInit {
     $("#contactform input, #contactform textarea").removeClass('error');
     $("#result").slideUp();
   });
+
+  this.getProducts();
  }, 500);
   }
 
@@ -917,7 +908,7 @@ export class EventsComponent implements OnInit {
           if (response.success && response.result.isGuest) {
             this.router.navigate(["/login"]);
           } else {
-            this.getEvents();
+            this.getProducts();
             this.getTicketLevels();
           }
         },
@@ -947,19 +938,32 @@ export class EventsComponent implements OnInit {
     }
   }
 
-  //GET ALL EVENTS
-  getEvents() {
+  //GET ALL PRODUCTS
+  getProducts() {
     this.paginationObj = {};
-    let url = `events?page=${this.page}&pageSize=${this.pageSize}&sortby=${this.sortedtby}&sortOrder=${this.sortOrder}`;
+    let url = `products?page=${this.page}&pageSize=${this.pageSize}&sortby=${this.sortedtby}&sortOrder=${this.sortOrder}`;
     this.webService.get(url).subscribe(
       (response: any) => {
         console.log(response);
         this.spinnerService.hide();
         if (response.success && response.status == 1) {
-          this.events = response.results;
+          this.products = response.results;
+          $('#new-arrivals').showbizpro({
+            dragAndScroll:"off",
+            visibleElementsArray:[4,4,3,1],
+            carousel:"off",
+            entrySizeOffset:0,
+            allEntryAtOnce:"off",
+            rewindFromEnd:"off",
+            autoPlay:"off",
+            delay:2000,
+            speed:400,
+            easing:'Back.easeOut'
+          });
           if (response.pagination) this.paginationObj = response.pagination;
+          
         } else {
-          this.events = [];
+          this.products = [];
           this.paginationObj = {
             total: 0,
           };
@@ -1065,7 +1069,7 @@ export class EventsComponent implements OnInit {
         if (response.success) {
           if (response.status == 1) {
             this.toastr.success(response.message, "Success");
-            this.getEvents();
+            this.getProducts();
             this.modalRef.hide();
           }
         } else {
@@ -1116,7 +1120,7 @@ export class EventsComponent implements OnInit {
         if (response.success) {
           if (response.status == 1) {
             this.toastr.success(response.message, "Success");
-            this.getEvents();
+            this.getProducts();
             this.modalRef.hide();
           }
         } else {
@@ -1140,7 +1144,7 @@ export class EventsComponent implements OnInit {
         if (response.success) {
           if (response.status == 1) {
             this.toastr.success(response.message, "Success");
-            this.getEvents();
+            this.getProducts();
           }
         } else {
           this.toastr.error(response.error, "Error");
@@ -1166,7 +1170,7 @@ export class EventsComponent implements OnInit {
               this.spinnerService.hide();
               if (response.success) {
                 this.toastr.success("Event deleted", "Success");
-                this.getEvents();
+                this.getProducts();
               } else {
                 this.toastr.error(response.errors[0], "Error");
               }
