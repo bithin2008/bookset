@@ -1,0 +1,197 @@
+table.driver_list_table thead tr th {
+    padding: 10px 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+table.driver_list_table tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+table.driver_list_table tbody tr td {
+    padding: 5px;
+}
+
+ul.pagination {
+    float: right;
+}
+
+
+/* 
+.page-item {
+    margin: 0 2px;
+}
+.page-item .page-link {
+    border-radius: 20px;
+} */
+
+.page-item.active .page-link {
+    background-color: #000000;
+    border-color: #000000;
+    /* padding-left: 13px;
+    padding-right: 13px; */
+}
+
+a.details_btn {
+    text-decoration: underline;
+    color: #23282c;
+}
+
+a.details_btn:hover {
+    color: #20a8d8;
+}
+
+.search_sec .input-group {
+    width: 50%;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.search_btn {
+    padding: 6px 10px;
+    background-color: #30374c;
+    border: 1px solid #30374c;
+    color: #fff;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.clear-search {
+    position: absolute;
+    right: 100px;
+    top: 7px;
+    opacity: 0.5;
+    z-index: 999;
+}
+
+.driver_list_table tbody tr td {
+    vertical-align: middle;
+}
+
+.driver_list_table tbody tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+
+/* tr:nth-child(odd) {background: #FFF} */
+
+.driver_list_table th {
+    background-color: #30374c;
+    color: #ffffff;
+}
+
+
+.photo-upload-btn {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-upload-btn input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.photo-holder {
+    padding: 5px;
+    position: relative;
+    display: block;
+    width: 250px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+.hero-photo-holder {
+    padding: 5px;
+    position: relative;
+    display: block;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photo-gallery {
+    padding: 5px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 0 5px 5px;
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    outline: 2px solid white;
+    outline-offset: -3px;
+}
+
+.photo-holder img,
+.hero-photo-holder img,
+.photo-gallery img {
+    width: 100%;
+}
+
+.img-thumbnail {
+    padding: 2px;
+    background-color: #ffffff;
+    border: 1px solid #c8ced3;
+    border-radius: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.delete-thumb {
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 9;
+
+}
+
+.delete-artist {
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9;
+    border-radius: 50%;
+    background-color: #ff211f;
+    border-color: #ff0200;
+}
+
+.delete-img {
+    text-align: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 9;
+    border-radius: 50%;
+    background-color: #ff211f;
+    border-color: #ff0200;
+}
+
+.photo-upload-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+@media (max-width: 1080px) {
+    /* .driver_list_table {
+        display: block;
+        overflow-x: scroll;
+    } */
+}
+
+@media (min-width: 320px) and (max-width: 991px) {}

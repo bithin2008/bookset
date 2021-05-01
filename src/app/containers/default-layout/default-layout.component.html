@@ -1,0 +1,304 @@
+<div id="wrapper">
+    <!-- Top Bar
+================================================== -->
+    <div id="top-bar">
+        <div class="container">
+
+            <!-- Top Bar Menu -->
+            <div class="ten columns">
+                <ul class="top-bar-menu">
+                    <li><i class="fa fa-phone"></i> +91 9907580621</li>
+                    <li><i class="fa fa-envelope"></i> <a href="#">bookset@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="six columns">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="icon-dribbble"></i></a></li>
+                    <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
+                    <li><a class="pinterest" href="#"><i class="icon-pinterest"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <!-- Header
+================================================== -->
+    <div class="container">
+
+
+        <!-- Logo -->
+        <div class="four columns">
+            <div id="logo">
+                <h1>
+                    <a href="index.html"><img src="../../../assets/img/Bookset-logo.png" alt="Bookset" title="Bookset" /></a>
+                </h1>
+            </div>
+        </div>
+
+
+        <!-- Additional Menu -->
+        <div class="twelve columns">
+            <div id="additional-menu">
+                <ul>
+                    <!--<li><a href="shopping-cart.html">Shopping Cart</a></li>-->
+                    <!--<li><a href="wishlist.html">WishList <span>(2)</span></a></li>-->
+                    <!--<li><a href="checkout-billing-details.html">Checkout</a></li>-->
+                    <li><a href="my-account.html">My Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Shopping Cart -->
+        <div class="twelve columns">
+
+            <div id="cart">
+
+                <!-- Button -->
+                <div class="cart-btn">
+                    <a href="#" class="button adc"><i class="fa fa-inr"></i> <span id="totalCartAmtspan">00.00</span></a>
+                </div>
+
+                <div class="cart-list">
+
+                    <div class="arrow"></div>
+
+                    <div class="cart-amount">
+                        <span id="cartheading">0 items in the shopping cart</span>
+                    </div>
+
+                    <ul id="headerCartul">
+
+                    </ul>
+
+                    <div class="cart-buttons button">
+                        <a href="shopping-cart.html" class="view-cart"><span data-hover="View Cart"><span>View Cart</span></span></a>
+                        <a href="checkout-billing-details.html" class="checkout"><span data-hover="Checkout">Checkout</span></a>
+                    </div>
+                    <div class="clearfix">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Search -->
+            <nav class="top-search">
+                <form action="#" method="get">
+                    <button><i class="fa fa-search"></i></button>
+                    <input class="search-field" type="text" placeholder="Search" value="" />
+                </form>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation
+    ================================================== -->
+    <div class="navTop">
+        <div class="container">
+            <div class="sixteen columns">
+
+                <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
+
+                <nav id="navigation">
+                    <ul class="menu" id="responsive">
+
+                        <li><a href="index.html" class="current homepage" id="current">Home</a></li>
+
+                        <li class="dropdown">
+                            <a href="#">Categories</a>
+                            <ul>
+
+                                <li><a href="product-list.html?catid=1o4owfd6y2z-5a86df54-190d-4204-b76a-84fb55c7e6ff">Books</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="demo-button">
+                            <a href="about-us.html">About Us</a>
+                        </li>
+                        <li class="demo-button">
+                            <a href="contact-us.html">Contact Us</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Slider
+    ================================================== -->
+    <div class="container fullwidth-element home-slider">
+
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+
+
+
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
+                        <img src="../../../assets/img/slides/banner1.jpg" alt="darkblurbg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <div class="caption dark sfb fadeout" data-x="750" data-y="170" data-speed="400" data-start="800" data-easing="Power4.easeOut">
+                            <!--<h2></h2>-->
+                            <!--<h3></h3>-->
+                            <!--<a href="shop-with-sidebar.html" class="caption-btn">Shop The Collection</a>-->
+                        </div>
+                    </li>
+
+
+                    <!-- <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
+                        <img src="../../../assets/img/slides/banner2.jpg" alt="darkblurbg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <div class="caption dark sfb fadeout" data-x="750" data-y="170" data-speed="400" data-start="800" data-easing="Power4.easeOut">                           
+                        </div>
+                    </li> -->
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Routing
+    ================================================== -->
+    <router-outlet></router-outlet>
+
+</div>
+
+<app-footer class="crm-footer">
+    <!-- Footer
+================================================== -->
+    <div id="footer">
+
+        <div class="container">
+            <div class="eight columns">
+
+                <!-- Headline -->
+                <h3 class="headline footer">NEWSLETTER SUBSCRIPTION</h3>
+                <span class="line"></span>
+                <div class="clearfix"></div>
+                <p>Sign up for BookSet updates to receive information about new arrivals, future events and specials.</p>
+            </div>
+
+            <div class="eight columns">
+                <form action="#" method="get">
+                    <button class="newsletter-btn" type="submit">SUBSCRIBE</button>
+                    <input class="newsletter" type="text" placeholder="mail@example.com" value="" />
+
+                </form>
+            </div>
+
+        </div>
+        <!-- Container -->
+        <div class="container">
+
+
+
+            <!--<div class="four columns">-->
+
+            <!-- Headline -->
+            <!--		<h3 class="headline footer">SHOP</h3>-->
+            <!--		<span class="line"></span>-->
+            <!--		<div class="clearfix"></div>-->
+
+            <!--		<ul class="footer-links">-->
+            <!--			<li><a href="#">New In</a></li>-->
+            <!--			<li><a href="#">Sale & Special Offers</a></li>-->
+            <!--			<li><a href="#">Women’s</a></li>-->
+            <!--			<li><a href="#">Men’s</a></li>-->
+            <!--			<li><a href="#">Shoes</a></li>-->
+            <!--		</ul>-->
+
+            <!--	</div>-->
+
+            <div class="four columns">
+
+                <!-- Headline -->
+                <h3 class="headline footer">INFORMATION </h3>
+                <span class="line"></span>
+                <div class="clearfix"></div>
+
+                <ul class="footer-links">
+                    <!--<li><a href="#">Order Status</a></li>-->
+                    <!--<li><a href="#">Payment Methods</a></li>-->
+                    <li><a href="delivery-returns.html">Delivery & Returns</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+
+            </div>
+
+            <div class="four columns">
+
+                <!-- Headline -->
+                <h3 class="headline footer">My Account</h3>
+                <span class="line"></span>
+                <div class="clearfix"></div>
+
+                <ul class="footer-links">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="about-us.html">About us </a></li>
+                    <li><a href="contact-us.html">Contact us </a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="four columns">
+
+                <!-- Headline -->
+                <h3 class="headline footer">FOLLOW US
+                </h3>
+                <span class="line"></span>
+                <div class="clearfix"></div>
+
+                <ul class="find-us">
+                    <li>
+                        <a href="#" title="Facebook"> <span class="fa fa-facebook"></span>Facebook </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Twitter"> <span class="fa fa-twitter"></span>Twitter </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+        </div>
+        <!-- Container / End -->
+
+    </div>
+    <!-- Footer / End -->
+
+    <!-- Footer Bottom / Start -->
+    <div id="footer-bottom">
+
+        <!-- Container -->
+        <div class="container">
+
+            <div class="eight columns">© Copyright 2020 by <a href="#">BookSet</a>. All Rights Reserved.</div>
+            <div class="eight columns text-right">
+                <img src="../../../assets/img/payments.png" alt="" />
+            </div>
+
+        </div>
+        <!-- Container / End -->
+
+    </div>
+    <!-- Footer Bottom / End -->
+</app-footer>
